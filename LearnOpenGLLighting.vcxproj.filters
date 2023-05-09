@@ -51,8 +51,8 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="lighting.vert" />
-    <None Include="lighting.frag" />
+    <None Include="color.vert" />
+    <None Include="color.frag" />
     <None Include="light_cube.vert" />
     <None Include="light_cube.frag" />
   </ItemGroup>
