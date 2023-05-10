@@ -41,6 +41,15 @@
     <Image Include="container2.png">
       <Filter>资源文件</Filter>
     </Image>
+    <Image Include="lighting_maps_specular_color.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="container2_specular.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="matrix.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h">
