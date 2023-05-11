@@ -168,10 +168,12 @@ int main()
 	glEnableVertexAttribArray(0);
 	
 	unsigned int diffuseMap = loadTexture("container2.png");
-	unsigned int specularMap = loadTexture("container2.png");
+	unsigned int specularMap = loadTexture("container2_specular.png");
+	unsigned int emissionMap = loadTexture("matrix.jpg");
 	lightingShader.use();
 	lightingShader.setInt("material.diffuse", 0);
-	lightingShader.setInt("material.diffuse", 1);
+	lightingShader.setInt("material.specular", 1);
+	lightingShader.setInt("material.emission", 2);
 
 	//渲染循环
 	while (!glfwWindowShouldClose(window))
@@ -218,6 +220,10 @@ int main()
 		//绑定镜面反射贴图
 		glActiveTexture(GL_TEXTURE1);
 		glBindTexture(GL_TEXTURE_2D, specularMap);
+
+		//绑定自发光贴图
+		glActiveTexture(GL_TEXTURE2);
+		glBindTexture(GL_TEXTURE_2D, emissionMap);
 
 		//渲染立方体
 		glBindVertexArray(cubeVAO);
